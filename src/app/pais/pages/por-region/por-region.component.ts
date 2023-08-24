@@ -9,6 +9,12 @@ export class PorRegionComponent {
   regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
   regionActiva: string = '';
 
+  getClaseCSS(region: string): string {
+    return region === this.regionActiva
+      ? 'btn btn-primary mr-1'
+      : 'btn btn-outline-primary mr-1';
+  }
+
   activarRegion(region: string) {
     this.regionActiva = region;
 
